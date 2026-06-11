@@ -6,6 +6,7 @@ export default class Cart {
 
   constructor() {
     eventBus.on('cart:add', ({ product, quantity = 1 }) => this.add(product, quantity));
+    eventBus.on('cart:remove', (id) => this.remove(id));
   }
 
   add(product, quantity) {
@@ -18,6 +19,16 @@ export default class Cart {
       });
     }
 
-    console.log(store.cart);
+    this.update();
+  }
+  remove(id) {
+    const originalCartSize = store.cart.length;
+    store.cart = store.cart.filter((item) => item.product.id !== id);
+
+    this.update();
+    return originalCartSize !== store.cart.length;
+  }
+  update() {
+    store.update();
   }
 }

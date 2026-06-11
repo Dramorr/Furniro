@@ -86,6 +86,9 @@ function assetsFileNames(assetInfo) {
   if (ext === '.css' && name !== 'mainStyles') return `css/layout/${name}[extname]`;
   if (ext === '.css') return `css/${name}[extname]`;
 
+  if (['.png', '.jpg', '.jpeg', '.webp', '.svg', '.avif'].includes(ext))
+    return `assets/img/${name}-[hash][extname]`;
+
   return `assets/${name}-[hash][extname]`;
 }
 function getHtmlInputs() {
@@ -112,9 +115,8 @@ export default defineConfig({
 
     rollupOptions: {
       input: {
-        // libs: path.resolve(__dirname, 'src/js/libs.min.js'),
         main: path.resolve(__dirname, 'src/js/main.js'),
-        mainStyles: path.resolve(__dirname, 'src/scss/main.scss'),
+        // mainStyles: path.resolve(__dirname, 'src/scss/main.scss'),
         ...getLayoutEntries('src/scss/layouts'),
         ...getHtmlInputs(),
       },
@@ -133,7 +135,7 @@ export default defineConfig({
   },
 
   server: {
-    open: 'src/index.html',
+    open: '/src/index.html',
     // cors: true,
   },
 
@@ -149,7 +151,7 @@ export default defineConfig({
 
   plugins: [
     sharpImageminPlugin({
-      inputDir: '.', // ✅ was assets/images
+      inputDir: '.',
       makeWebp: true,
       webpQuality: 75,
       jpegQuality: 75,

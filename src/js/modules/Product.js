@@ -58,13 +58,13 @@ export class Product {
     return card;
   }
 }
-export function formatProductPrice({ original, discount }) {
+export function formatProductPrice({ original, discount }, block = Product.cardClass) {
   if (discount) {
     return `
-      <span class="product-card__price-discount">
+      <span class="${block}__price-discount">
         ${config.currency.symbol} ${Math.round(original - (original / 100) * discount).toLocaleString(config.currency.locale)}
       </span>
-      <span class="product-card__price-original">
+      <span class="${block}__price-original">
       ${config.currency.symbol} ${original.toLocaleString(config.currency.locale)}
       </span>
     `;

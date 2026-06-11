@@ -1,0 +1,115 @@
+.cart{
+  &__inner{
+    display: flex;
+    gap: 32px;
+  }
+  &__content{
+    width: 100%;
+    & table{
+      width: 100%;
+      // border-collapse: collapse;
+      border-spacing: 0 15px;
+      margin-top: -15px;
+      & thead{
+        font-size: 16px;
+        font-weight: 500;
+        & tr{ background: var(--theme-color-light); }
+        & th:nth-child(4){ text-align: center; }
+      }
+      & tbody{
+        & img{
+          width: 100px;
+          aspect-ratio: 1 / 1;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+      & th, & td{
+        text-align: left;
+        &:not(:has(img)){
+          padding: 12px;
+        }
+        & .remove-from-cart{
+          display: block;
+          width: 28px;
+          aspect-ratio: 1 / 1;
+          
+          background: var(--theme-color);
+          mask-image: var(--icon);
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: contain;
+  
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__checkout{
+    width: 100%;
+    max-width: 395px;
+    flex-shrink: 0;
+    
+    padding: 16px 75px 32px;
+    background: var(--theme-color-light);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-title{
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 48px;
+    }
+    &-row{
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-btn{
+      padding: 16px 48px;
+      border: 1px solid currentColor;
+      border-radius: 15px;
+  
+      font-size: 20px;
+      font-weight: 400;
+      width: 100%;
+  
+      background: transparent;
+      outline: none;
+      margin: 42px 0 0;
+  
+      transition: .3s;
+      cursor: pointer;
+      &:hover{
+        background: var(--theme-color);
+        border-color: var(--theme-color);
+        color: var(--text-color-alternative);
+      }
+    }
+  }
+
+  &__quantity{
+    border: 1px solid #9F9F9F;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &-single-price__price-original{
+    font-size: .8em;
+    text-decoration: line-through;
+    color: var(--text-color-paragraph);
+    display: block;
+  }
+}

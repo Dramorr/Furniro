@@ -49,20 +49,51 @@
       <section class="page-head" style="--bg: url('./assets/imgs/shop-header.jpg')">
         <div class="container">
           <div class="page-head__inner">
-            <h1 class="page-head__title">Shop</h1>
+            <div class="page-head__logo"><img src="/ui/icon.svg" alt="" /></div>
+            <h1 class="page-head__title">Cart</h1>
             <ul class="page-head__breadcrumbs">
               <li><a href="./index.html">Home</a></li>
-              <li>Shop</li>
+              <li>Cart</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="products">
+      <section class="cart">
         <div class="container">
-          <div class="products__inner">
-            <h2 class="products__title">Our Products</h2>
-            <div class="products__items" id="products-container" data-pagination></div>
+          <div class="cart__inner">
+            <div class="cart__content">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="./assets/imgs/product-1.jpg" alt="" /></td>
+                    <td>{{product-name}}</td>
+                    <td>{{product-single-price}}</td>
+                    <td>{{product-quantity}}</td>
+                    <td>{{product-total-price}}</td>
+                    <td><span style="--icon: url(/svg/trash-bin.svg)"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cart__checkout">
+              <h2 class="cart__checkout-title">Cart Totals</h2>
+              <div class="cart__checkout-row">
+                <p class="cart__checkout-row-title">Total</p>
+                <p class="cart__checkout-row-value">0</p>
+              </div>
+              <a class="cart__checkout-btn" href="#">Check Out</a>
+            </div>
           </div>
         </div>
       </section>

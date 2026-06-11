@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="styles-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Furniro</title>
+    <link rel="icon" href="../ui/icon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="../js/modulepreload-polyfill-B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="../js/lib-Dsgu5RJ7.js"></script>
+    <script type="module" crossorigin src="../js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="../css/layout/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="./index.html">
+            <img src="../ui/logo.svg" alt="Furniro" />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./shop.html">Shop</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header__instruments">
+              <a class="header__search" href="#" style="--icon: url('../svg/search.svg')"> </a>
+              <a class="header__favorite" href="#" style="--icon: url('../svg/heart.svg')"> </a>
+              <a class="header__cart" href="./cart.html" style="--icon: url('../svg/cart.svg')"> </a>
+            </div>
+          </nav>
+
+          <button class="header__burger" aria-label="burger-menu-toggle"><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="single-product">
+        <div class="single-product__breadcrumbs-wrapper">
+          <div class="container">
+            <ul class="single-product__breadcrumbs">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./shop.html">Shop</a></li>
+              <li>{{product-name}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="single-product__inner">
+            <div class="single-product__gallery">
+              <ul class="single-product__gallery-thumbs"></ul>
+              <div class="single-product__gallery-slider swiper">
+                <div class="swiper-wrapper"></div>
+              </div>
+            </div>
+            <div class="single-product__content">
+              <h1 class="single-product__title">{{product-name}}</h1>
+              <p class="single-product__price">{{product-price}}</p>
+              <div class="single-product__rate-wrapper">
+                <div class="single-product__rate" style="--rate: 4.5"></div>
+                <p class="single-product__rated-total">5 Customer Review</p>
+              </div>
+              <div class="single-product__short-description">
+                <p>
+                  Setting the bar as one of the loudest speakers in its class, the Kilburn is a
+                  compact, stout-hearted hero with a well-balanced audio which boasts a clear
+                  midrange and extended highs for a sound.
+                </p>
+              </div>
+
+              <div class="single-product__checkout">
+                <div class="single-product__quantity quantity">
+                  <button class="quantity-btn" data-action="minus">-</button>
+                  <input type="number" value="1" min="1" />
+                  <button class="quantity-btn" data-action="plus">+</button>
+                </div>
+                <button class="single-product__add-to-card">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single-product-info">
+        <div class="container">
+          <div class="single-product-info__inner">
+            <ul class="single-product-info__tabs tabs-container">
+              <li>Description</li>
+              <li>Additional Information</li>
+              <li>Reviews [5]</li>
+            </ul>
+            <div class="single-product-info__contents contents-container">
+              <div class="single-product-info__description">
+                <div class="single-product-info__text format-text">
+                  <p>
+                    Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active
+                    stereo speaker takes the unmistakable look and sound of Marshall, unplugs the
+                    chords, and takes the show on the road.
+                  </p>
+                  <p></p>
+                  <p>
+                    Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled
+                    engineering. Setting the bar as one of the loudest speakers in its class, the
+                    Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts
+                    a clear midrange and extended highs for a sound that is both articulate and
+                    pronounced. The analogue knobs allow you to fine tune the controls to your
+                    personal preferences while the guitar-influenced leather strap enables easy and
+                    stylish travel.
+                  </p>
+                </div>
+                <div class="single-product-info__gallery"></div>
+              </div>
+              <div class="single-product-info__addInfo">
+                <div class="single-product-info__text format-text">
+                  <p>Additional Info:</p>
+                  <p></p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus eaque ipsa
+                    provident saepe odit pariatur suscipit nulla corporis? Quos magni soluta beatae
+                    at id architecto aspernatur cumque nihil molestiae repellendus!
+                  </p>
+                </div>
+              </div>
+              <div class="single-product-info__reviews">
+                <div class="single-product-info__text format-text">
+                  <p>reviews...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="products__inner">
+            <h2 class="products__title">Related Products</h2>
+            <div class="products__items" id="products-container" data-random></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col">
+            <a class="footer__logo" href="./index.html">
+              <img src="../ui/logo.svg" alt="" />
+            </a>
+            <div class="footer__text">
+              <p>400 University Drive Suite 200 Coral Gables,</p>
+              <p>FL 33134 USA</p>
+            </div>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Links</p>
+            <ul class="footer__list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Help</p>
+            <ul class="footer__list">
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Newsletter</p>
+            <div class="footer__mailing-wrapper">
+              <form class="footer__mailing">
+                <input type="email" placeholder="Enter Your Email Address" />
+                <input type="submit" value="SUBSCRIBE" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <p class="footer__copyrights">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
