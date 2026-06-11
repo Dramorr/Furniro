@@ -1,6 +1,7 @@
 import config from '../productsConfig';
+import { eventBus } from './eventBus';
 
-export default class Product {
+export class Product {
   static cardClass = 'product-card';
 
   constructor(object) {
@@ -14,21 +15,6 @@ export default class Product {
     this.description = object.description;
     this.short_description = object.short_description;
   }
-
-  // static formatPrice({ original, discount }) {
-  //   if (discount) {
-  //     return `
-  //       <span class="product-card__price-discount">
-  //         ${config.currency.symbol} ${Math.round(original - (original / 100) * discount).toLocaleString(config.currency.locale)}
-  //       </span>
-  //       <span class="product-card__price-original">
-  //       ${config.currency.symbol} ${original.toLocaleString(config.currency.locale)}
-  //       </span>
-  //     `;
-  //   }
-
-  //   return `${config.currency.symbol} ${original.toLocaleString(config.currency.locale)}`;
-  // }
 
   createCard() {
     const card = document.createElement('card');
@@ -57,13 +43,17 @@ export default class Product {
     ${badgeHTML}
 
     <div class="${Product.cardClass}__overlay">
-      <a class="${Product.cardClass}__btn btn" href="#">Add to cart</a>
+      <button class="${Product.cardClass}__btn btn" href="#">Add to cart</button>
       <div class="${Product.cardClass}__instruments">
         <a class="${Product.cardClass}__share" href="#">Share</a>
         <a class="${Product.cardClass}__compare" href="#">Compare</a>
         <button class="${Product.cardClass}__like" href="#">Like</button>
       </div>
     </div>`;
+
+    card.querySelector(`.${Product.cardClass}__btn`)?.addEventListener('click', () => {
+      eventBus.emit('cart:add', { product: this });
+    });
 
     return card;
   }

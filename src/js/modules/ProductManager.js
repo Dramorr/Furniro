@@ -1,9 +1,8 @@
-import products from '../../../products/products.json';
-import Product from './Product';
+import { store } from './Store';
+import { Product } from './Product';
 
 export default class ProductManager {
-  static products = [];
-  current_page = 0;
+  page = 0;
 
   constructor(container, settings = {}) {
     if (!container) return;
@@ -18,7 +17,7 @@ export default class ProductManager {
       ...settings,
     };
 
-    this.setCurrentProducts(ProductManager.products);
+    this.setCurrentProducts(store.products.map((product) => new Product(product)));
 
     if (this.settings.has_load_more_btn) {
       this.container.parentElement.appendChild(this.createLoadMoreBtn());
@@ -39,7 +38,7 @@ export default class ProductManager {
   // setFilter(filter) {}
 
   loadMore(products = this.products) {
-    const startAt = (this.current_page + 1) * this.settings.products_per_page;
+    const startAt = (this.page + 1) * this.settings.products_per_page;
     const endAt = startAt + +this.settings.products_per_page;
     for (let i = startAt; i < endAt; ++i) {
       if (!products[i]) break;
@@ -47,16 +46,16 @@ export default class ProductManager {
       this.container.appendChild(products[i].createCard());
     }
 
-    if (this.loadMoreBtn && this.current_page + 1 >= this.max_pages - 1) {
+    if (this.loadMoreBtn && this.page + 1 >= this.max_pages - 1) {
       this.loadMoreBtn.style.display = 'none';
     }
 
-    ++this.current_page;
+    ++this.page;
   }
   setPage(page = 0, init = false) {
     if (page < 0) return;
     if (page > this.max_pages - 1) return;
-    if (!init && page === this.current_page) return;
+    if (!init && page === this.page) return;
 
     this.container.innerHTML = '';
 
@@ -67,12 +66,10 @@ export default class ProductManager {
       this.container.appendChild(this.products[i].createCard());
     }
 
-    this.current_page = page;
+    this.page = page;
     if (this.pagination) {
       this.pagination.querySelector('.active')?.classList.remove('active');
-      this.pagination
-        .querySelector(`[data-page-index="${this.current_page}"]`)
-        .classList.add('active');
+      this.pagination.querySelector(`[data-page-index="${this.page}"]`).classList.add('active');
     }
   }
 
@@ -114,11 +111,11 @@ export default class ProductManager {
       if (btn.classList.contains('active')) return;
 
       if (btn.classList.contains('pagination-prev-btn')) {
-        this.setPage(this.current_page - 1);
+        this.setPage(this.page - 1);
         return;
       }
       if (btn.classList.contains('pagination-next-btn')) {
-        this.setPage(this.current_page + 1);
+        this.setPage(this.page + 1);
         return;
       }
 
@@ -128,15 +125,8 @@ export default class ProductManager {
     return this.pagination;
   }
 
-  static addProduct(product) {
-    if (!product) return false;
-
-    ProductManager.products.push(product);
-    return true;
+  // renderOn(container){}
+  static getAllProductc() {
+    return this.products;
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  products.forEach((product) => ProductManager.addProduct(new Product(product)));
-  const productManager = new ProductManager('#products-container');
-});

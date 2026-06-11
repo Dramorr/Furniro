@@ -1,6 +1,8 @@
-import products from '../../../products/products.json';
 import TabsManager from '../modules/TabsManages';
 import ThumbPagination from '../modules/ThumbPagination';
+
+import { store } from '../modules/Store';
+import { eventBus } from '../modules/eventBus';
 import { formatProductPrice } from '../modules/Product';
 
 import Swiper from 'swiper';
@@ -8,7 +10,7 @@ import { EffectFade } from 'swiper/modules';
 
 const url_params = new URLSearchParams(window.location.search);
 const product_id = url_params.get('product_id');
-const product = products.find((product) => product.id == product_id);
+const product = store.products.find((product) => product.id == product_id);
 
 document.addEventListener('DOMContentLoaded', () => {
   if (!document.querySelector('.single-product')) return;
@@ -21,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initProduct() {
+  if (!product) return;
+
   document.querySelector('.single-product__breadcrumbs li:last-child').textContent = product.name;
   document.querySelector('.single-product__title').textContent = product.name;
   document.querySelector('.single-product__price').innerHTML = formatProductPrice(product.price);
@@ -32,6 +36,14 @@ function initProduct() {
   document.querySelector('.single-product__rate').style.setProperty('--rate', product.rating.value);
   document.querySelector('.single-product__rated-total').textContent =
     `${product.rating.reviews} Customer Review`;
+
+  document.querySelector('.single-product__add-to-card').addEventListener('click', () => {
+    const quantity = +document.querySelector('.quantity input').value;
+    eventBus.emit('cart:add', {
+      product: product,
+      quantity: quantity,
+    });
+  });
 }
 function initTabs() {
   const tabs = document.querySelector('.tabs-container');
