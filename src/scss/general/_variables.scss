@@ -1,0 +1,16 @@
+:root{
+  --background-color-primary: #fff;
+  --text-color-primary: #333333;
+  --text-color-alternative: #fff;
+  --text-color-paragraph: #9F9F9F;
+
+  // --theme-color: #B88E2F;
+  --theme-color: #5f9ea0;
+  --theme-color-light: color-mix(in srgb, var(--theme-color) 20%, var(--background-color-primary));
+  --theme-color-dark: color-mix(in srgb, var(--theme-color) 20%, #000);
+
+  --card-color-bg: #F4F5F7;
+  --card-color-text: #898989;
+
+  --btn-text-color: var(--theme-color);
+}

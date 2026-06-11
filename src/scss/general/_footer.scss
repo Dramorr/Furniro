@@ -1,0 +1,99 @@
+.footer{
+  border-top: 1px solid rgba(#000, .17);
+
+  &__inner{
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo{
+    display: block;
+    height: 41px;
+
+    margin-bottom: 50px;
+    & img{
+      width: auto;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+  &__text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #9F9F9F;
+  }
+  &__copyrights{
+    padding: 35px 0;
+    border-top: 1px solid rgba(#000, .17);
+  }
+
+  &__col{
+    &-title{
+      color: #9F9F9F;
+      margin-bottom: 55px;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+
+    font-weight: 500;
+  }
+
+  &__mailing-wrapper{
+    & form{
+      display: flex;
+      align-items: stretch;
+      gap: 11px;
+
+      & input{
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        line-height: 150%;
+
+        padding: 0;
+        background: transparent;
+
+        border: none; outline: none;
+        border-bottom: 1px solid var(--text-color-primary);
+
+        &:not([type=submit]){ min-width: 200px; }
+      }
+      & input[type=submit]{
+        font-weight: 500;
+        text-transform: uppercase;
+
+        transition: .3s;
+        cursor: pointer;
+        &:hover{
+          color: var(--theme-color);
+          border-color: var(--theme-color);
+        }
+      }
+    }
+  }
+
+  @media(max-width: 968px){
+    &__inner{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px; padding: 24px 0 32px;
+    }
+    &__logo{ margin-bottom: 24px; }
+    &__col{
+      &:nth-child(1){ grid-column: 1 / -1; }
+      &-title{ margin-bottom: 32px; }
+    }
+    &__list{ gap: 24px; }
+    &__copyrights{ padding: 24px 0; }
+  }
+  @media(max-width: 768px){
+    &__inner{ grid-template-columns: 1fr 1fr; }
+    &__col:nth-child(4){ grid-column: 1 / -1; }
+  }
+  @media(max-width: 500px){
+    &__inner{ grid-template-columns: 1fr; }
+  }
+}

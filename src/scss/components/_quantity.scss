@@ -1,0 +1,32 @@
+.quantity{
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: .3s;
+  &-btn{
+    background: transparent;
+    border: none; outline: none;
+    flex-shrink: 0;
+
+    cursor: pointer;
+    transition: inherit;
+    &:hover{
+      background: rgba(#000, .04);
+    }
+  }
+  & input{
+    width: 50px;
+    text-align: center;
+    outline: none; border: none;
+    flex-grow: 1;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    -moz-appearance: textfield;
+  }
+}

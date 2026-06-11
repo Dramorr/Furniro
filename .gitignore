@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+.prettierignore
+.prettierrc
+esling.config.js
+postcss.config.js
+
+.env

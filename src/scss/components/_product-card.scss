@@ -1,0 +1,189 @@
+.product-card{
+  position: relative;
+  width: 100%;
+
+  background: var(--card-color-bg, transparent);
+
+  transition: .3s;
+  &__thumb{
+    width: 100%;
+    aspect-ratio: 19 / 20;
+    overflow: hidden;
+    & img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+
+      transition: transform 0.4s ease;
+    }
+  }
+  &__info{
+    padding: 16px 16px 32px;
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+  &__description{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--card-color-text, inherit);
+    margin-bottom: 8px;
+  }
+  &__price{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+
+    &-original{
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--card-color-text, inherit);
+      text-decoration: line-through;
+    }
+  }
+  &__badge{
+    position: absolute;
+    top: min(24px, 2vw);
+    right: min(24px, 2vw);
+
+    min-width: 48px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+
+    pointer-events: none;
+
+    background: #E97171;
+    &--new{ background: #2EC1AC; }
+  }
+
+
+  &::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: rgba(#3A3A3A, .73);
+
+    transition: inherit;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+  }
+  &__overlay{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 16px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+    transition: inherit;
+  }
+  &__btn{
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    margin-bottom: 24px;
+    padding: 12px;
+    width: 100%;
+    max-width: 180px;
+    &:hover{
+      background: transparent;
+      --btn-text-color: var(--text-color-alternative);
+    }
+    &:not(:hover){
+      --btn-text-color: var(--theme-color);
+      background: var(--text-color-alternative);
+      border-color: var(--text-color-alternative);
+    }
+  }
+  &__instruments{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 20px;
+
+    color: var(--text-color-alternative);
+
+    transition: .3s;
+    & > *{
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      background: transparent;
+      border: none; outline: none;
+      padding: 0; margin: 0;
+      color: inherit;
+
+      cursor: pointer;
+      transition: .3s;
+      &::before{
+        content: '';
+        display: block;
+        width: 16px;
+        aspect-ratio: 1 / 1;
+
+        background: currentColor;
+        mask-image: var(--icon);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+
+        transition: inherit;
+      }
+      &:hover{ color: var(--theme-color); }
+    }
+  }
+  &__like::before{ --icon: url('/svg/heart.svg');}
+  &__share::before{ --icon: url('/svg/share.svg');}
+  &__compare::before{ --icon: url('/svg/compare.svg');}
+  &:not(:hover)::after{ opacity: 0; }
+  &:not(:hover) &{
+    &__overlay{
+      opacity: 0;
+      pointer-events: none;
+    }
+    &__btn{
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    &__instruments{
+      opacity: 0;
+      transform: translateY(25px);
+    }
+  }
+  &:hover &{
+    &__thumb img{ transform: scale(1.04);}
+    &__instruments{
+      transition-delay: .1s;
+    }
+  }
+
+  @media(max-width: 968px){
+    &__btn{ font-size: 14px; }
+    &__instruments{
+      gap: 12px;
+    }
+  }
+}

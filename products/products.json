@@ -1,0 +1,170 @@
+[
+  {
+    "id": 0,
+    "name": "Syltherine",
+    "card_description": "Stylish cafe chair",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 2500000,
+      "discount": 30
+    },
+    "rating": {
+      "value": 3.5,
+      "reviews": 10
+    },
+    "badge": "sale",
+    "thumbnails": [
+      "./assets/imgs/product-1.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Leviosa",
+    "card_description": "Stylish cafe chair",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 2500000,
+      "discount": null
+    },
+    "rating": {
+      "value": 4,
+      "reviews": 15
+    },
+    "badge": null,
+    "thumbnails": [
+      "./assets/imgs/product-2.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Lolito",
+    "card_description": "Luxury big sofa",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 7000000,
+      "discount": 50
+    },
+    "rating": {
+      "value": 5,
+      "reviews": 13
+    },
+    "badge": "sale",
+    "thumbnails": [
+      "./assets/imgs/product-3.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Respira",
+    "card_description": "Outdoor bar table and stool",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 500000,
+      "discount": null
+    },
+    "rating": {
+      "value": 4,
+      "reviews": 8
+    },
+    "badge": "new",
+    "thumbnails": [
+      "./assets/imgs/product-4.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Grifo",
+    "card_description": "Night lamp",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 1500000,
+      "discount": null
+    },
+    "rating": {
+      "value": 4.5,
+      "reviews": 53
+    },
+    "badge": null,
+    "thumbnails": [
+      "./assets/imgs/product-5.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Muggo",
+    "card_description": "Small mug",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 150000,
+      "discount": null
+    },
+    "rating": {
+      "value": 3.8,
+      "reviews": 17
+    },
+    "badge": "new",
+    "thumbnails": [
+      "./assets/imgs/product-6.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Pingky",
+    "card_description": "Cute bed set",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 7000000,
+      "discount": 50
+    },
+    "rating": {
+      "value": 5,
+      "reviews": 9
+    },
+    "badge": "sale",
+    "thumbnails": [
+      "./assets/imgs/product-7.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Potty",
+    "card_description": "Minimalist flower pot",
+    "short_description": "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sapiente amet soluta itaque dignissimos distinctio eveniet similique, rem aut vero enim animi provident beatae dolores explicabo atque voluptate voluptas ex.",
+    "price": {
+      "original": 500000,
+      "discount": null
+    },
+    "rating": {
+      "value": 2.5,
+      "reviews": 33
+    },
+    "badge": "new",
+    "thumbnails": [
+      "./assets/imgs/product-8.jpg",
+      "./assets/imgs/home-hero-bg.jpg",
+      "./assets/imgs/home-slider-slide-1.jpg"
+    ]
+  }
+]

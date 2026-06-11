@@ -1,0 +1,53 @@
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; width: fit-content;
+
+  padding: 12px 36px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+
+  outline: none;
+  background: var(--btn-bg-color, transparent);
+  color: var(--btn-text-color, var(--theme-color));
+  border: 1px solid var(--btn-text-color, var(--theme-color));
+
+  cursor: pointer;
+  transition: .3s;
+  &:hover{
+    --btn-bg-color: var(--theme-color);
+    --btn-text-color: var(--text-color-alternative);
+  }
+
+  &--filled{
+    --btn-bg-color: var(--theme-color);
+    --btn-text-color: var(--text-color-alternative);
+    border-color: var(--theme-color);
+    &:hover{
+      --btn-bg-color: transparent;
+      --btn-text-color: var(--theme-color);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  &--arrow::after{
+    content: '';
+    display: block;
+    width: 24px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background: var(--btn-text-color);
+    mask-image: url('/svg/btn-arrow.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    transition: inherit;
+  }
+
+  &.disabled{ cursor: not-allowed; }
+}
