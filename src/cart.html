@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" class="styles-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Furniro</title>
+    <link rel="icon" href="/furniro/ui/icon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="/furniro/js/modulepreload-polyfill-B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/furniro/js/lib-Dsgu5RJ7.js"></script>
+    <script type="module" crossorigin src="/furniro/js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/furniro/css/layout/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="./index.html">
+            <img src="/furniro/ui/logo.svg" alt="Furniro" />
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./shop.html">Shop</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header__instruments">
+              <a class="header__search" href="#" style="--icon: url('/furniro/svg/search.svg')"> </a>
+              <a class="header__favorite" href="#" style="--icon: url('/furniro/svg/heart.svg')"> </a>
+              <a class="header__cart" href="./cart.html" style="--icon: url('/furniro/svg/cart.svg')"> </a>
+            </div>
+          </nav>
+
+          <button class="header__burger" aria-label="burger-menu-toggle"><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page-head" style="--bg: url('/furniro/assets/img/shop-header-BSWODG0v.jpg')">
+        <div class="container">
+          <div class="page-head__inner">
+            <div class="page-head__logo"><img src="/furniro/ui/icon.svg" alt="" /></div>
+            <h1 class="page-head__title">Cart</h1>
+            <ul class="page-head__breadcrumbs">
+              <li><a href="./index.html">Home</a></li>
+              <li>Cart</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart">
+        <div class="container">
+          <div class="cart__inner">
+            <div class="cart__content">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="/furniro/assets/img/product-1-BtY0YVjs.jpg" alt="" /></td>
+                    <td>{{product-name}}</td>
+                    <td>{{product-single-price}}</td>
+                    <td>{{product-quantity}}</td>
+                    <td>{{product-total-price}}</td>
+                    <td><span style="--icon: url(/furniro/svg/trash-bin.svg)"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cart__checkout">
+              <h2 class="cart__checkout-title">Cart Totals</h2>
+              <div class="cart__checkout-row">
+                <p class="cart__checkout-row-title">Total</p>
+                <p class="cart__checkout-row-value">0</p>
+              </div>
+              <a class="cart__checkout-btn" href="#">Check Out</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col">
+            <a class="footer__logo" href="./index.html">
+              <img src="/furniro/ui/logo.svg" alt="" />
+            </a>
+            <div class="footer__text">
+              <p>400 University Drive Suite 200 Coral Gables,</p>
+              <p>FL 33134 USA</p>
+            </div>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Links</p>
+            <ul class="footer__list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Help</p>
+            <ul class="footer__list">
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Newsletter</p>
+            <div class="footer__mailing-wrapper">
+              <form class="footer__mailing">
+                <input type="email" placeholder="Enter Your Email Address" />
+                <input type="submit" value="SUBSCRIBE" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <p class="footer__copyrights">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
