@@ -103,7 +103,7 @@ function getHtmlInputs() {
 
 export default defineConfig({
   root: path.resolve(__dirname, 'src'),
-  base: '/furniro/',
+  base: '/Furniro/',
 
   // Keep assets structure 1:1:
   // src/public/** -> dist/**
