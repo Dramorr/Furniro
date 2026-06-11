@@ -6,28 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Furniro</title>
-    <link rel="icon" href="../ui/icon.svg" />
+    <link rel="icon" href="/furniro/ui/icon.svg" />
 
-    <!-- fonst -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- crutial styles -->
-    <script type="module" crossorigin src="../js/modulepreload-polyfill-B5Qt9EMX.js"></script>
-    <script type="module" crossorigin src="../js/lib-Dsgu5RJ7.js"></script>
-    <script type="module" crossorigin src="../js/main.js"></script>
-    <link rel="stylesheet" crossorigin href="../css/layout/main.css">
+
+    <script type="module" crossorigin src="/furniro/js/modulepreload-polyfill-B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/furniro/js/lib-Dsgu5RJ7.js"></script>
+    <script type="module" crossorigin src="/furniro/js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/furniro/css/layout/main.css">
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__inner">
           <a class="header__logo" href="./index.html">
-            <img src="../ui/logo.svg" alt="Furniro" />
+            <img src="/furniro/ui/logo.svg" alt="Furniro" />
           </a>
 
           <nav class="header__nav">
@@ -39,9 +37,9 @@
             </ul>
 
             <div class="header__instruments">
-              <a class="header__search" href="#" style="--icon: url('../svg/search.svg')"> </a>
-              <a class="header__favorite" href="#" style="--icon: url('../svg/heart.svg')"> </a>
-              <a class="header__cart" href="./cart.html" style="--icon: url('../svg/cart.svg')"> </a>
+              <a class="header__search" href="#" style="--icon: url('/furniro/svg/search.svg')"> </a>
+              <a class="header__favorite" href="#" style="--icon: url('/furniro/svg/heart.svg')"> </a>
+              <a class="header__cart" href="./cart.html" style="--icon: url('/furniro/svg/cart.svg')"> </a>
             </div>
           </nav>
 
@@ -50,14 +48,35 @@
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <section class="page-head" style="--bg: url('/furniro/assets/img/shop-header-BSWODG0v.jpg')">
+        <div class="container">
+          <div class="page-head__inner">
+            <h1 class="page-head__title">Shop</h1>
+            <ul class="page-head__breadcrumbs">
+              <li><a href="./index.html">Home</a></li>
+              <li>Shop</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container">
+          <div class="products__inner">
+            <h2 class="products__title">Our Products</h2>
+            <div class="products__items" id="products-container" data-pagination></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__col">
             <a class="footer__logo" href="./index.html">
-              <img src="../ui/logo.svg" alt="" />
+              <img src="/furniro/ui/logo.svg" alt="" />
             </a>
             <div class="footer__text">
               <p>400 University Drive Suite 200 Coral Gables,</p>

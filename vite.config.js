@@ -102,6 +102,7 @@ function getHtmlInputs() {
 }
 
 export default defineConfig({
+  root: path.resolve(__dirname, 'src'),
   base: '/furniro/',
 
   // Keep assets structure 1:1:
@@ -135,7 +136,7 @@ export default defineConfig({
   },
 
   server: {
-    open: '/src/index.html',
+    open: '/index.html',
     // cors: true,
   },
 
