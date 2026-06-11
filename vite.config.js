@@ -102,7 +102,7 @@ function getHtmlInputs() {
 }
 
 export default defineConfig({
-  base: './',
+  base: '/furniro/',
 
   // Keep assets structure 1:1:
   // src/public/** -> dist/**
