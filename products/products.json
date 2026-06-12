@@ -15,9 +15,9 @@
     },
     "badge": "sale",
     "thumbnails": [
-      "./assets/imgs/product-1.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-1.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -36,9 +36,9 @@
     },
     "badge": null,
     "thumbnails": [
-      "./assets/imgs/product-2.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-2.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -57,9 +57,9 @@
     },
     "badge": "sale",
     "thumbnails": [
-      "./assets/imgs/product-3.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-3.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -78,9 +78,9 @@
     },
     "badge": "new",
     "thumbnails": [
-      "./assets/imgs/product-4.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-4.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -99,9 +99,9 @@
     },
     "badge": null,
     "thumbnails": [
-      "./assets/imgs/product-5.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-5.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -120,9 +120,9 @@
     },
     "badge": "new",
     "thumbnails": [
-      "./assets/imgs/product-6.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-6.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -141,9 +141,9 @@
     },
     "badge": "sale",
     "thumbnails": [
-      "./assets/imgs/product-7.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   },
   {
@@ -162,9 +162,9 @@
     },
     "badge": "new",
     "thumbnails": [
-      "./assets/imgs/product-8.jpg",
-      "./assets/imgs/home-hero-bg.jpg",
-      "./assets/imgs/home-slider-slide-1.jpg"
+      "/Furniro/products/product-8.jpg",
+      "/Furniro/products/product-7.jpg",
+      "/Furniro/products/product-8.jpg"
     ]
   }
 ]
