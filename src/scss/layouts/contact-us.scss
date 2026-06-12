@@ -1,0 +1,75 @@
+@use '../components/form-elements';
+
+.contact-us{
+  &__inner{
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  &__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    max-width: 700px;
+    margin: 0 auto 96px;
+  }
+  &__title{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 32px;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 300px;
+
+    &-item{
+      display: flex;
+      gap: 32px;
+
+      &-title{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+      &-text{ color: var(--text-color-primary); }
+      &-icon{
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        margin-top: 0.3em;
+
+        & img{
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &__form-wrapper{
+    width: 100%;
+    max-width: 530px;
+  }
+  & form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & label{ margin-bottom: 22px; }
+    & .input{ margin-bottom: 32px; }
+    & .btn{
+      border-radius: 10px;
+      min-width: 230px;
+    }
+  }
+}

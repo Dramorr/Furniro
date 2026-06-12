@@ -1,4 +1,5 @@
 const config = {
+  domain: '/Furniro',
   currency: {
     locale: 'id-ID',
     symbol: 'Rp',

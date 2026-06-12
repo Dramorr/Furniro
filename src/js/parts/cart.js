@@ -1,3 +1,4 @@
+import config from '../productsConfig';
 import { eventBus } from '../modules/eventBus';
 import { formatProductPrice } from '../modules/Product';
 
@@ -28,7 +29,7 @@ function renderCart() {
       <td>${formatProductPrice(product.price, 'cart-single-price')}</td>
       <td><span class="cart__quantity">${quantity}</span></td>
       <td>${formatProductPrice({ original: productTotalPrice }, 'cart-total-price')}</td>
-      <td><button class="remove-from-cart" style="--icon: url(/svg/trash-bin.svg)"></button></td>
+      <td><button class="remove-from-cart" style="--icon: url(${config.domain}/svg/trash-bin.svg)"></button></td>
     `;
     row.querySelector('.remove-from-cart').addEventListener('click', () => {
       eventBus.emit('cart:remove', product.id);
