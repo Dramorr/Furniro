@@ -38,7 +38,12 @@
 
             <div class="header__instruments">
               <a class="header__search" href="#" style="--icon: url('/Furniro/svg/search.svg')"> </a>
-              <a class="header__favorite" href="#" style="--icon: url('/Furniro/svg/heart.svg')"> </a>
+              <a
+                class="header__favorite"
+                href="./favorite.html"
+                style="--icon: url('/Furniro/svg/heart.svg')"
+              >
+              </a>
               <a class="header__cart" href="./cart.html" style="--icon: url('/Furniro/svg/cart.svg')"> </a>
             </div>
           </nav>
@@ -68,7 +73,10 @@
               </div>
             </div>
             <div class="single-product__content">
-              <h1 class="single-product__title">{{product-name}}</h1>
+              <div class="single-product__head">
+                <h1 class="single-product__title">{{product-name}}</h1>
+                <button class="single-product__favorite"></button>
+              </div>
               <p class="single-product__price">{{product-price}}</p>
               <div class="single-product__rate-wrapper">
                 <div class="single-product__rate" style="--rate: 4.5"></div>

@@ -125,7 +125,7 @@ export default class ProductManager {
     return this.pagination;
   }
 
-  // renderOn(container){}
+  // render(container) {}
   static getAllProductc() {
     return this.products;
   }

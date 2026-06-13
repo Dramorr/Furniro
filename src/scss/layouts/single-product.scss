@@ -72,10 +72,66 @@
     }
   }
 
+  &__head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px; position: relative;
+  }
   &__title{
     font-size: 42px;
     font-weight: 400;
     line-height: 120%;
+
+  }
+  &__favorite{
+    position: relative;
+
+    background: transparent;
+    border: none; outline: none;
+    padding: 0; margin: 0;
+
+    width: 24px;
+    aspect-ratio: 1 / 1;
+
+    cursor: pointer;
+    transition: .3s;
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+  
+      background: currentColor;
+      mask-image: url('/svg/heart.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+  
+      transition: inherit;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+  
+      width: 100%;
+      aspect-ratio: 1 / 1;
+  
+      background: currentColor;
+      mask-image: url('/svg/heart-filled.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+  
+      transition: inherit;
+    }
+
+    &.favorite{ color: var(--theme-color); }
+    &:not(.favorite)::after{
+      opacity: 0;
+      transform: scale(.2);
+    }
   }
   &__price{
     font-size: 24px;

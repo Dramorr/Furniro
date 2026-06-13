@@ -1,9 +1,9 @@
-import config from '../productsConfig';
+import config from '../config';
 import { eventBus } from '../modules/eventBus';
 import { formatProductPrice } from '../modules/Product';
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderCart();
+  document.querySelector('section.cart') && renderCart();
 });
 function renderCart() {
   if (!localStorage.getItem('cart')) return;

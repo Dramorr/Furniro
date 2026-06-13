@@ -44,6 +44,15 @@ function initProduct() {
       quantity: quantity,
     });
   });
+
+  const favoriteToggle = document.querySelector('.single-product__favorite');
+  if (store.favorite.find((item) => item.id === product.id)) {
+    favoriteToggle.classList.add('favorite');
+  }
+  favoriteToggle.addEventListener('click', function () {
+    eventBus.emit('favorite:toggle', product);
+    this.classList.toggle('favorite');
+  });
 }
 function initTabs() {
   const tabs = document.querySelector('.tabs-container');

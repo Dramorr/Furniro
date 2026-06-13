@@ -127,6 +127,7 @@
 
     transition: .3s;
     & > *{
+      position: relative;
       display: flex;
       align-items: center;
       gap: 2px;
@@ -155,7 +156,31 @@
       &:hover{ color: var(--theme-color); }
     }
   }
-  &__like::before{ --icon: url('/svg/heart.svg');}
+  &__like{
+    &::before{ --icon: url('/svg/heart.svg');}
+    &::after{
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+
+      width: 16px;
+      aspect-ratio: 1 / 1;
+
+      background: currentColor;
+      mask-image: url('/svg/heart-filled.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+
+      pointer-events: none;
+      transition: inherit;
+    }
+    &:not(.favorite)::after{
+      opacity: 0;
+      transform: scale(.2);
+    }
+  }
+
   &__share::before{ --icon: url('/svg/share.svg');}
   &__compare::before{ --icon: url('/svg/compare.svg');}
   &:not(:hover)::after{ opacity: 0; }

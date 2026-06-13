@@ -1,4 +1,5 @@
-import config from '../productsConfig';
+import config from '../config';
+import { store } from './Store';
 import { eventBus } from './eventBus';
 
 export class Product {
@@ -20,6 +21,7 @@ export class Product {
     const card = document.createElement('card');
     card.className = Product.cardClass;
 
+    const isFavorite = store.favorite.find((item) => item.id === this.id);
     let badgeHTML = '';
     if (this.badge) {
       badgeHTML = `
@@ -47,12 +49,18 @@ export class Product {
       <div class="${Product.cardClass}__instruments">
         <a class="${Product.cardClass}__share" href="#">Share</a>
         <a class="${Product.cardClass}__compare" href="#">Compare</a>
-        <button class="${Product.cardClass}__like" href="#">Like</button>
+        <button class="${Product.cardClass}__like ${isFavorite && 'favorite'}" href="#">Like</button>
       </div>
     </div>`;
 
-    card.querySelector(`.${Product.cardClass}__btn`)?.addEventListener('click', () => {
+    card.querySelector(`.${Product.cardClass}__btn`).addEventListener('click', () => {
       eventBus.emit('cart:add', { product: this });
+    });
+
+    const favoriteBtn = card.querySelector(`.${Product.cardClass}__like`);
+    favoriteBtn.addEventListener('click', () => {
+      eventBus.emit('favorite:toggle', this);
+      favoriteBtn.classList.toggle('favorite');
     });
 
     return card;

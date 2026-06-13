@@ -13,8 +13,12 @@
       & thead{
         font-size: 16px;
         font-weight: 500;
-        & tr{ background: var(--theme-color-light); }
-        & th:nth-child(4){ text-align: center; }
+        & th{
+          background: var(--theme-color-light);
+          &:first-child{ border-radius: 10px 0 0 10px; }
+          &:last-child{ border-radius: 0 10px 10px 0; }
+          &:nth-child(4){ text-align: center; }
+        }
       }
       & tbody{
         & img{
@@ -49,6 +53,7 @@
     width: 100%;
     max-width: 395px;
     flex-shrink: 0;
+    border-radius: 10px;
     
     padding: 16px 75px 32px;
     background: var(--theme-color-light);

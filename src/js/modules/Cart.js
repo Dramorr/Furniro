@@ -19,6 +19,7 @@ export default class Cart {
       });
     }
 
+    this.messageSuccess();
     this.update();
   }
   remove(id) {
@@ -29,6 +30,20 @@ export default class Cart {
     return originalCartSize !== store.cart.length;
   }
   update() {
-    store.update();
+    store.updateCart();
+  }
+
+  messageSuccess(text = 'Added to cart') {
+    const message = document.createElement('div');
+    message.classList.add('message', 'add-to-cart__success');
+    message.textContent = text;
+
+    document.documentElement.appendChild(message);
+    setTimeout(() => {
+      message.style.animation = 'none';
+      message.offsetHeight; // ← примусовий reflow
+      message.style.animation = 'message-popup .3s ease 0s 1 reverse forwards';
+      message.addEventListener('animationend', () => message.remove(), { once: true });
+    }, 2000);
   }
 }

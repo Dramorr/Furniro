@@ -1,0 +1,45 @@
+.message{
+  position: fixed;
+  inset: auto 0 25px;
+
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 24px;
+  border-radius: 10px;
+  
+  animation: message-popup .3s ease 0s 1;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+  border: 2px solid var(--theme-color);
+  // background: var(--theme-color);
+  backdrop-filter: blur(4px);
+  background: color-mix(in srgb, var(--theme-color) 85%, transparent);
+  color: var(--text-color-alternative);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  z-index: 10;
+
+  &::before{
+    content: '';
+    display: block;
+
+    width: 18px;
+    aspect-ratio: 1 / 1;
+
+    background: currentColor;
+    mask-image: url('/svg/check.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+@keyframes message-popup {
+  0%{ transform: translateY(calc(25px + 100%)); }
+  100%{ transform: translateY(0); }
+}

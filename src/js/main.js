@@ -9,6 +9,7 @@ registerPageStyles().then(() => {
 import './parts/side-slider';
 import './parts/single-product';
 import './parts/cart';
+import './parts/favorite';
 
 import Cart from './modules/Cart';
 import ProductManager from './modules/ProductManager';
